@@ -1,0 +1,16 @@
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import StudentForm from "./StudentForm";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <nav>
+        <Link to="/">Home</Link> | <Link to="/studentform">Student Form</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<h2>Home Page</h2>} />
+        <Route path="/studentform" element={<StudentForm />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
